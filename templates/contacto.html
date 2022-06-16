@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block main %}
+<main class="bg-img">
+    <div class="row">
+        <div class="col-1 m-0 p-0">x</div>
+        <div class="col-xl-7 pt-xl-4 px-xl-0">
+            <form action="" method="post">
+            {% csrf_token %}
+                <div class="row m-0">
+                    <h1 class="text-primary col-12">Contáctanos</h1>
+                    <div class="col-xl-6 col-9">
+                        <label for="{{ form.Nombre.id_for_label }}">Nombre:</label>
+                        {{ form.Nombre }}
+                    </div>
+                    <div class="col-xl-4 col-7">
+                        <label for="{{ form.Email.id_for_label }}">Email:</label>
+                        {{ form.Email }}
+                    </div>
+                </div>
+                <div class="row m-0 pt-2">
+                    <div class="col-xl-3 col-5">
+                        <label for="{{ form.Telefono.id_for_label }}">Teléfono:</label>
+                        {{ form.Telefono }}
+                    </div>
+                    <div class="col-xl-4">
+                        <label for="{{ form.Motivo.id_for_label }}">Motivo:</label>
+                        {{ form.Motivo }}
+                    </div>
+                    <div class="col-xl-3">
+                        <label for="{{ form.Disponibilidad.id_for_label }}">Disponibilidad:</label>
+                        {{ form.Disponibilidad }}
+                    </div>
+                </div>
+                <div class="row m-0 pt-2">
+                    <div class="col-xl-8">
+                        <label for="{{ form.Comentario.id_for_label }}">Comentario:</label>
+                        {{ form.Comentario }}
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <button class="btn btn-primary p-1">Enviar</button>
+                </div>
+        </form>
+        </div>
+
+        <div class="col-xl-3 bg-danger mt-xl-4">
+            <h1>Llamanos</h1>
+        </div>
+    </div>
+</main>
+{% endblock %}

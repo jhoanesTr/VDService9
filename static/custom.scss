@@ -1,0 +1,13 @@
+$primary: #ffc107;
+$secondary: #1E243B;
+$custom-nav-link-color: #ffffff7e;
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+);
+
+//General<body>
+$body-color: white;
+
+@import "bootstrap/scss/bootstrap";
